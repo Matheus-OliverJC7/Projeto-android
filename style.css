@@ -132,6 +132,7 @@ picture {
     color: #fff;
    justify-content: center;
     display: flex;
+    text-align: center;
 }
 #rodape strong{
     color: #fff;
