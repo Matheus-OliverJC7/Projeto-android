@@ -1,5 +1,5 @@
- function mostrarMenu() {
-     let menu = document.querySelector('#menu-mobile');
-     if(menu.style.display == 'flex') {menu.style.display = 'none'}
-     else{menu.style.display = 'flex'}
+function mostrarMenu() {
+    let menu = document.querySelector('#menu-mobile')
+    if(menu.style.display == 'block') {menu.style.display = 'none'}
+    else{menu.style.display = 'block'}
 }
