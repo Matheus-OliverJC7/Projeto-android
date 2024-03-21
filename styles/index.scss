@@ -69,12 +69,6 @@ body{background-color: $cor1;}
     background-color: #fff;
     padding: 40px 15px 15px 15px;
     img{display: block;}
-    a{display: inline-block;}
-    a:hover{opacity: 0.7;}
-    a::before{
-        content: url("../img/link-icon.png");
-        margin-right: 4px;
-    }
 }
 #main-content{
     display: block;
@@ -98,7 +92,6 @@ body{background-color: $cor1;}
         text-align: justify;
     }
     strong{color: $cor5;}
-    a{color: $cor4;}
     picture{
         display: block;
         margin: 40px 0px;
@@ -150,7 +143,6 @@ body{background-color: $cor1;}
         max-width: 520px;
         margin: 30px auto;
     }
-    a{color: $cor5;}
 }
 #main-footer{
     background-color: $cor5;
@@ -168,6 +160,9 @@ body{background-color: $cor1;}
     }
 }
 @media (max-width: 684px){
+    body{
+        overflow-x: hidden;
+    }
     .menu-desktop{display: none;}
     .menu-mobile-icon-conteiner{
         display: flex;
@@ -187,6 +182,31 @@ body{background-color: $cor1;}
         align-self: flex-start;
         box-sizing: initial;
     }
+    .menu-mobile{
+        display: block;
+        position: absolute;
+        left: 0px;
+        background-color: $cor5;
+        width: 50vw;
+        height: 100vh;
+        overflow: hidden;
+        border-top: 2px solid $cor6;
+        translate: -50vw 0;
+        transition: all 0.2s ease-in-out;
+    }
+    .nav-list{
+        flex-direction: column;
+        margin-top: 20px;
+        li,a{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        a{
+            border-radius: 0px;
+            padding: 12px 8px;
+        }
+    }
     #main-content{
         .irina-blok-img img, .dandroids-img img{
             width: 100%;
@@ -194,15 +214,21 @@ body{background-color: $cor1;}
             margin: 0 auto;
         }
     }
-}
-.active-line1{
-    transform: rotate(45deg);
-    translate: 0px 10px;
-}
-.active-line2{
-    width: 0px;
-}
-.active-line3{
-    transform: rotate(-45deg);
-    translate: 0px -10px;
+    /*ClassList*/
+    .active-line1{
+        transform: rotate(45deg);
+        translate: 0px 10px;
+    }
+    .active-line2{
+        width: 0px;
+        transition: all 0.1s ease-in-out;
+    }
+    .active-line3{
+        transform: rotate(-45deg);
+        translate: 0px -10px;
+    }
+    .active-menu{
+        translate: 0vw 0;
+        overflow-y: hidden;
+    }
 }

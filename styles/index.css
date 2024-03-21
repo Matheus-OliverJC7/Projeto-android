@@ -76,16 +76,6 @@ body {
 #content-conteiner img {
   display: block;
 }
-#content-conteiner a {
-  display: inline-block;
-}
-#content-conteiner a:hover {
-  opacity: 0.7;
-}
-#content-conteiner a::before {
-  content: url("../img/link-icon.png");
-  margin-right: 4px;
-}
 
 #main-content {
   display: block;
@@ -111,9 +101,6 @@ body {
 }
 #main-content strong {
   color: #1A5C37;
-}
-#main-content a {
-  color: #2FA866;
 }
 #main-content picture {
   display: block;
@@ -172,9 +159,6 @@ body {
   max-width: 520px;
   margin: 30px auto;
 }
-#additional-content a {
-  color: #1A5C37;
-}
 
 #main-footer {
   background-color: #1A5C37;
@@ -194,6 +178,9 @@ body {
 }
 
 @media (max-width: 684px) {
+  body {
+    overflow-x: hidden;
+  }
   .menu-desktop {
     display: none;
   }
@@ -215,22 +202,52 @@ body {
     align-self: flex-start;
     box-sizing: initial;
   }
+  .menu-mobile {
+    display: block;
+    position: absolute;
+    left: 0px;
+    background-color: #1A5C37;
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+    border-top: 2px solid #002903;
+    translate: -50vw 0;
+    transition: all 0.2s ease-in-out;
+  }
+  .nav-list {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .nav-list li, .nav-list a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-list a {
+    border-radius: 0px;
+    padding: 12px 8px;
+  }
   #main-content .irina-blok-img img, #main-content .dandroids-img img {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
   }
-}
-.active-line1 {
-  transform: rotate(45deg);
-  translate: 0px 10px;
-}
-
-.active-line2 {
-  width: 0px;
-}
-
-.active-line3 {
-  transform: rotate(-45deg);
-  translate: 0px -10px;
+  /*ClassList*/
+  .active-line1 {
+    transform: rotate(45deg);
+    translate: 0px 10px;
+  }
+  .active-line2 {
+    width: 0px;
+    transition: all 0.1s ease-in-out;
+  }
+  .active-line3 {
+    transform: rotate(-45deg);
+    translate: 0px -10px;
+  }
+  .active-menu {
+    translate: 0vw 0;
+    overflow-y: hidden;
+  }
+  .body-overflow{overflow-y: hidden;}
 }/*# sourceMappingURL=index.css.map */
