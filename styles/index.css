@@ -1,0 +1,236 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: "font-header-h1";
+  src: url("../fontes/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: "font-idroid";
+  src: url("../fontes/idroid.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #C5EBD6;
+}
+
+.menu-mobile, .menu-mobile-icon-conteiner {
+  display: none;
+}
+
+#main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, #2FA866, #1A5C37);
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  padding: 20px 10px;
+}
+#main-header h1 {
+  font-family: "font-header-h1";
+  font-size: 3rem;
+}
+#main-header h2 {
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+.menu-desktop {
+  background-color: #1A5C37;
+  padding: 15px 15px 15px 30px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  padding: 8px;
+  border-radius: 8px;
+}
+.nav-list a:hover {
+  background-color: rgba(250, 250, 250, 0.1);
+  color: rgba(240, 240, 240, 0.8);
+}
+
+#content-conteiner {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0px auto;
+  background-color: #fff;
+  padding: 40px 15px 15px 15px;
+}
+#content-conteiner img {
+  display: block;
+}
+#content-conteiner a {
+  display: inline-block;
+}
+#content-conteiner a:hover {
+  opacity: 0.7;
+}
+#content-conteiner a::before {
+  content: url("../img/link-icon.png");
+  margin-right: 4px;
+}
+
+#main-content {
+  display: block;
+}
+#main-content h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font: 400 1.5rem "font-idroid";
+}
+#main-content h2 {
+  font-family: "font-idroid";
+  font-weight: 400;
+  background-image: linear-gradient(to right, #83E1AD, #fff);
+  padding: 5px 10px;
+  margin-left: -15px;
+  text-indent: 8px;
+  color: rgb(27, 27, 27);
+}
+#main-content p {
+  margin: 15px 0px;
+  line-height: 28px;
+  text-align: justify;
+}
+#main-content strong {
+  color: #1A5C37;
+}
+#main-content a {
+  color: #2FA866;
+}
+#main-content picture {
+  display: block;
+  margin: 40px 0px;
+}
+#main-content .irina-blok-img img, #main-content .dandroids-img img {
+  width: 100%;
+}
+#main-content .android-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-content .youtube-video {
+  background-color: #1A5C37;
+  position: relative;
+  padding: 10px 10px 55.4% 10px;
+}
+#main-content .youtube-video iframe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
+#additional-content {
+  display: block;
+  background-color: #C5EBD6;
+  margin: 30px 0px;
+  border-radius: 10px;
+  padding: 10px;
+  /*2714 é um código de um incone. 00A0 é um código que atribui espaço.*/
+}
+#additional-content h1 {
+  background-color: #1A5C37;
+  color: #fff;
+  border-radius: 10px 10px 0px 0px;
+  margin: -10px -10px 0px -10px;
+  padding: 10px;
+}
+#additional-content p {
+  margin: 8px 0px;
+  line-height: 25px;
+  text-align: justify;
+}
+#additional-content strong {
+  color: #002903;
+}
+#additional-content .android-version-list {
+  list-style-type: "✔ ";
+  list-style-position: inside;
+  -moz-columns: 2;
+       columns: 2;
+  width: 100%;
+  max-width: 520px;
+  margin: 30px auto;
+}
+#additional-content a {
+  color: #1A5C37;
+}
+
+#main-footer {
+  background-color: #1A5C37;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+  font-weight: 300;
+}
+
+.dev-link {
+  display: inline-block;
+  font: italic 400 1rem "Roboto";
+  color: #fff;
+}
+.dev-link:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 684px) {
+  .menu-desktop {
+    display: none;
+  }
+  .menu-mobile-icon-conteiner {
+    display: flex;
+    background-color: #1A5C37;
+    padding-bottom: 8px;
+  }
+  .menu-mobile-icon {
+    margin-left: 5vw;
+  }
+  .line {
+    width: 35px;
+    height: 2px;
+    margin: 8px 0px;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-self: flex-start;
+    box-sizing: initial;
+  }
+  #main-content .irina-blok-img img, #main-content .dandroids-img img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+.active-line1 {
+  transform: rotate(45deg);
+  translate: 0px 10px;
+}
+
+.active-line2 {
+  width: 0px;
+}
+
+.active-line3 {
+  transform: rotate(-45deg);
+  translate: 0px -10px;
+}/*# sourceMappingURL=index.css.map */

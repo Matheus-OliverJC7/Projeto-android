@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .menu-mobile-icon{
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 35px;
+        background-color: blue;
+        transform: rotate(180deg);
+    }
+    .line-2{
+        width: 35px;
+        height: 2px;
+        margin: 8px 0;
+        background-color: #fff;
+        transition: all 0.2s ease-in-out;
+    }
+    .active-line1{
+    transform: rotate(45deg);
+    translate: 0px 10px;
+}
+.active-line2{
+    width: 0px;
+    transition: all 1s ease-in-out;
+}
+.active-line3{
+    transform: rotate(-45deg);
+    translate: 0px -10px;
+}
+    </style>
+</head>
+<body>
+    <div class="menu-mobile-icon">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
+</body>
+<script>
+    const lines = document.querySelectorAll('.line');
+const menuIcon = document.querySelector('.menu-mobile-icon');
+menuIcon.addEventListener('click', function(){
+    let classList = ['active-line1','active-line2','active-line3'];
+    for(let i = 0;i<lines.length;i++){
+        lines[i].classList.toggle(classList[i]);
+    }
+});
+</script>
+</html>

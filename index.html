@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Projeto Android</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/png">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles/index.css"/>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/png"/>
 </head>
 <body>
-<header id="cabecalho">    
+<header id="main-header">
 <hgroup>
     <h1>Curiosidades de Tecnologia</h1>
     <h2>Tudo aquilo que você sempre quis saber sobre o mundo Tech em um único lugar</h2>
 </hgroup>
 </header>
-<nav>
-    <ul id="nav-list">
+<nav class="menu-desktop">
+    <ul class="nav-list">
         <li><a href="#">home</a></li>
         <li><a href="#">notícias</a></li>
         <li><a href="#">curiosidades</a></li>
         <li><a href="#">contato</a></li>
     </ul>
 </nav>
-<div class="menu-mobile-icon" onclick="mostrarMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
+<div class="menu-mobile-icon-conteiner">
+    <div class="menu-mobile-icon">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+    </div>
 </div>
-<ul id="menu-mobile">
-    <li><a href="#">home</a></li>
-    <li><a href="#">notícias</a></li>
-    <li><a href="#">curiosidades</a></li>
-    <li><a href="#">contato</a></li>
-</ul>
-<main id="corpo">
-<article id="conteudo-principal">
+<nav class="menu-mobile">
+    <ul class="nav-list">
+        <li><a href="#" target="_blank">home</a></li>
+        <li><a href="#" target="_blank">notícias</a></li>
+        <li><a href="#" target="_blank">curiosidades</a></li>
+        <li><a href="#" target="_blank">contato</a></li>
+    </ul>
+</nav>
+<main id="content-conteiner">
+<article id="main-content">
 <h1>História do Mascote do Android</h1>
 
 <p>Provavelmente você sabe que o sistema operacional <strong>Android</strong>, mantido pelo Google é um dos mais utilizados para dispositivos móveis em todo o mundo. Mas tavez você não saiba que o seu simpático mascote tem um nome e uma história muito curiosa? Pois acompanhe esse artigo para aprender muita coisa sobre esse robozinho.</p>
@@ -43,35 +46,35 @@
 <h2>A primeira versão</h2>
 
 <p>A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado <strong>Dan Morrill</strong>. Ele conta que abriu o <a href="https://inkscape.org/pt-br/" target="_blank" rel="external">Inkscape</a> (software livre para vetorização de imagens) e criou sua própria versão de robô. O objetivo era apenas personificar o sistema apenas para a a sua equipe, não existia nenhuma solicitação da empresa para a criação de um mascote.</p>
-<picture>
-    <source media="(max-width: 1030px)" srcset="img/dan-droids-pq.png" type="image/png"/>
-    <img src="img/dan-droids.png"/>
+<picture class="dandroids-img">
+    <source media="(max-width: 684px)" srcset="img/dan-droids-pq.png" type="image/png"/>
+    <img src="img/dan-droids.png" alt="4 robos de cores diferentes."/>
 </picture>
 
 <p>Essa primeira versão bizarra até foi batizada em homenagem ao seu criador: seriam os <strong>Dandroids</strong>.</p>
 
 <h2>Surge um novo mascote</h2>
 <p>A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área. A ilustradora Russa <strong>Irina Blok</strong>, também funcionária do Google, ficou com a missão de representar o pequeno robô de uma maneira mais agradável.</p>
-<picture>
-    <source media="(max-width: 1030px)" srcset="img/irina-blok-pq.jpg" type="image/jpg"/>
-    <img src="img/irina-blok.jpg"/>
+<picture class="irina-blok-img">
+    <source media="(max-width: 684px)" srcset="img/irina-blok-pq.jpg" type="image/jpg"/>
+    <img src="img/irina-blok.jpg" alt="Criadora dos Dandroids."/>
 </picture>
 
 <p>A ideia principal da Irina era representar tudo graficamente com poucos traços e de forma mais chapada. O desenho também deveria gerar identificação rápida com quem o olha. Surgiu então o <strong>Bugdroid</strong>, o novo mascote do Android.</p>
-<picture>
-    <img src="img/bugdroid.png"/>
+<picture class="android-img">
+    <img src="img/bugdroid.png" alt="Logo do sistema operacional android."/>
 </picture>
 
 <p>A principal inspiração para os traços do novo Bugdroid veio daqueles bonequinhos que ilustram portas de banheiro para indicar o gênero de cada porta. Conta a lenda que a artista estava criando em sua mesa no escritório do Google e olhou para o lado dos banheiros e a identificação foi imediata: simples, limpo, objetivo.</p>
-<div class="video-youtube">
+<div class="youtube-video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </article>
-<aside id="conteudo-adicional">    
+<aside id="additional-content">    
     <h1>Quer aprender mais?</h1> 
     <p>Outro assunto curioso em relação ao Android é que cada versão sempre foi nomeada em homenagem a um doce, em ordem alfabética a partir da versão 1.5 até a 9.0.</p>
     
-    <ul>
+    <ul class="android-version-list">
         <li>1.5 - Cupcake</li>
         <li>1.6 - Donut</li>
         <li>3.0 - Eclair</li>
@@ -95,8 +98,9 @@
 </aside> 
 <p>Então é isso! Espero que você tenha gostado do nosso artigo com essa curiosidade sobre o sistema Android e seu simpático mascote.</p>
 </main>
-<footer id="rodape">         
-<p>Site criado por <strong>Matheus de Oliveira</strong>.</p>
+<footer id="main-footer">         
+<p>Desenvolvido por <a href="https://github.com/matheusoliveirajc" target="_blank" class="dev-link">Matheus de Oliveira</a></p>
 </footer>
+<script src="scripts/index.js"></script>
 </body>
 </html>
