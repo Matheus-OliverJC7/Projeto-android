@@ -216,6 +216,9 @@ body{background-color: $cor1;}
         }
     }
     /*ClassList*/
+    .blockScroll-body{
+        overflow-y: hidden;
+    }
     .active-line1{
         transform: rotate(45deg);
         translate: 0px 10px;
